@@ -1,0 +1,14 @@
+<metal:page use-macro="python:here.getFormsTool().getForm('site_admin_template').macros['page']">
+  <h1 metal:fill-slot="title" i18n:translate="" tal:content="python:here.title" />
+  <tal:body metal:fill-slot="section">
+    <link rel="stylesheet" type="text/css" media="screen"
+      tal:attributes="href string:${here/absolute_url}/++resource++naaya.openmeetings.view.css" />
+
+    <form action="." method="post" class="edit-form"
+      enctype="multipart/form-data" id="zc.page.browser_form">
+      <tal:form replace="structure here/@@form.edit" />
+    </form>
+
+  </tal:body>
+
+</metal:page>

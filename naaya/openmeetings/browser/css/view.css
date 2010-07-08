@@ -1,0 +1,42 @@
+.form-status {
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: red;
+}
+
+.required {
+  color: red;
+}
+
+.meetings-window {
+  width: 100%;
+  height: 600px;
+}
+
+.meetings {
+  position: absolute;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.meetings-fullscreen {
+  top: 0;
+  left: 0;
+  z-index: 20000;
+}
+
+.meetings .buttons {
+  text-align: right;
+  width: 100%;
+}
+
+.meetings .buttons .fullscreen {
+  background: transparent url('++resource++naaya.openmeetings.images/maximize.png') no-repeat right center;
+  padding-right: 20px;
+}
+
+.meetings .buttons .exit-fullscreen {
+  background-image: url('++resource++naaya.openmeetings.images/minimize.png');
+}

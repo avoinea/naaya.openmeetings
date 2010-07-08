@@ -1,0 +1,13 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="naaya">
+
+  <permission
+    id="naaya.openmeetings.edit"
+    title="Naaya Edit OpenMeetings Tool" />
+
+  <permission
+    id="naaya.openmeetings.view"
+    title="Naaya View OpenMeetings Tool" />
+
+</configure>

@@ -1,0 +1,41 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="naaya">
+
+  <!-- Tool -->
+  <browser:page name="form.edit"
+    for="naaya.openmeetings.interfaces.IOpenMeetingsTool"
+    class=".controller.edit.Edit"
+    permission="naaya.openmeetings.edit"
+    />
+
+  <browser:page name="index_html"
+    for="naaya.openmeetings.interfaces.IOpenMeetingsTool"
+    template="template/view.pt"
+    permission="naaya.openmeetings.edit"
+    />
+
+  <!-- Meetings -->
+  <browser:page name="meetings"
+    for="zope.interface.Interface"
+    class=".controller.view.Meetings"
+    template="template/meetings.pt"
+    permission="naaya.openmeetings.view"
+    />
+
+  <browser:resource
+    name="naaya.openmeetings.view.css"
+    file="css/view.css"
+    />
+
+  <browser:resource
+    name="naaya.openmeetings.view.js"
+    file="js/view.js"
+    />
+
+  <browser:resourceDirectory
+    name="naaya.openmeetings.images"
+    directory="./images" />
+
+</configure>

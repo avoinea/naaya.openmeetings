@@ -1,0 +1,11 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:five="http://namespaces.zope.org/five"
+  i18n_domain="naaya">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <include file="permissions.zcml" />
+  <include package=".browser" />
+
+</configure>

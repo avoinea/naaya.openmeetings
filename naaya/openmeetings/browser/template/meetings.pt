@@ -1,0 +1,24 @@
+<metal:block metal:use-macro="here/standard_template_macro">
+  <metal:head fill-slot="head">
+    <link rel="stylesheet" type="text/css" media="screen" tal:attributes="
+      href string:${here/absolute_url}/++resource++naaya.openmeetings.view.css" />
+    <script type="text/javascript" tal:attributes="
+      src string:${here/absolute_url}/++resource++naaya.openmeetings.view.js"></script>
+  </metal:head>
+
+  <metal:body fill-slot="body">
+    <div class="meetings-window">
+      <div class="meetings">
+        <div class="buttons">
+          <a class="fullscreen" href="#" i18n:translate="">Fullscreen</a>
+        </div>
+        <iframe tal:attributes="src python:view.href()" style="width: 100%; height: 100%"></iframe>
+        <script type="text/javascript" tal:content="string:
+          jQuery(document).ready(function(){
+            jQuery('div.meetings').openmeetings();
+          });
+        "></script>
+      </div>
+    </div>
+  </metal:body>
+</metal:block>
