@@ -19,17 +19,17 @@ jQuery.fn.openmeetings = function(settings){
     },
 
     resize: function(button){
-      if(self.fullscreen){
-        self.fullscreen = false;
+      if(!self.fullscreen){
+        self.fullscreen = true;
         self.addClass('meetings-fullscreen');
         self.width(jQuery(window).width());
-        self.height(jQuery(window).height() - 30);
+        self.height(jQuery(window).height() - 20);
 
         button.addClass('exit-fullscreen');
         button.text('Exit fullscreen');
 
       }else{
-        self.fullscreen = true;
+        self.fullscreen = false;
         self.removeClass('meetings-fullscreen');
         self.width(self.parent().width());
         self.height(self.parent().height() - 20);
